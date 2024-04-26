@@ -107,6 +107,38 @@ const musicCards = cancionesFavoritas.map(song => `
         class="position-absolute img z-1">
 </div>
 `);
-
 // Agregar los cards al contenedor
-musicCardsContainer.innerHTML = musicCards.join(''); 
+musicCardsContainer.innerHTML = musicCards.join('');
+
+/* EJERCICIO 3 */
+let API_url = "https://pokeapi.co/api/v2/pokemon/ditto";
+
+const consumirApi = async () => {
+    const respuesta = await fetch(API_url);
+    const resultado = await respuesta.json();
+
+    // Obtener la URL de la especie
+    const speciesURL = resultado.species.url;
+    // Realizar una nueva solicitud para obtener más detalles de la especie
+    const speciesResponse = await fetch(speciesURL);
+    const speciesData = await speciesResponse.json();
+    // Encontrar la descripción de la especie (generalmente en el idioma inglés)
+    const description = speciesData.flavor_text_entries.find(entry => entry.language.name === 'en').flavor_text;
+
+    // Obtener una referencia al div
+    let container = document.getElementById("imgContainer");
+    let container2 = document.getElementById("textContainer");
+
+    // Crear elementos de texto
+    let img = document.createElement("img");
+    let description1 = document.createElement("p");
+
+    img.classList.add('img');
+    description1.classList.add('p-3');
+    img.src = resultado.sprites.front_default;
+    description1.textContent = description;
+
+    container.appendChild(img);
+    container2.appendChild(description1);
+}
+consumirApi();

@@ -26,55 +26,78 @@
 
 <body>
     <p class="date">Trabajo de clase 25/04/2024</p>
-    <main class="contenedor-total p-lg-5 p-md-4 p-2">
-        <div class="col-12 d-flex flex-column align-items-center">
-            <div class="contenedor_e1 d-flex flex-column justify-content-center align-items-center p-lg-5 p-md-4 p-2 mb-5 col-10"
-                id="ejercicio_1">
-                <h1>Ejemplo por cada mètodo que se puede hacer en un array </h1>
-                <h6 class="mb-5">(Revisar consola)</h6>
-                <div class="col-11 container-ej1 p-5 shadow hvr-grow position-relative mb-5">
-                    <div class="content z-3">
-                        <h4>ArrayEjemplo.push({ nombre: 'Melanie', edad: '19' });</h4>
-                    </div>
-                    <h4> Mètodo PUSH()</h4>
-                    <h6>(Lìnea 12-16 del documento js)</h6>
-                    <p class="mt-3">
-                        El método push() añade uno o más elementos al final de un array y devuelve la nueva longitud
-                        del array.
-                    </p>
+    <main class="col-12 p-lg-5 p-md-4 p-2 d-flex flex-column align-items-center">
+        <div class="d-grid gap-5 col-9">
+            <div class="d-grid gap-5"> <!--Contenedor del ejercicio 1-->
+                <div class="text-center"> <!--Contenedor del titulo 1-->
+                    <h1>Ejemplo por cada método que se puede hacer en un Array de js</h1>
+                    <h6>(Revisar consola)</h6>
                 </div>
+                <div class="card-container d-grid gap-5 d-flex flex-column align-items-center">
+                    <div class="col-11 container-ej1 p-5 shadow hvr-grow position-relative ">
+                        <div class="content z-3">
+                            <h4>ArrayEjemplo.push({ nombre: 'Melanie', edad: '19' });</h4>
+                        </div>
+                        <h4> Mètodo PUSH()</h4>
+                        <h6>(Lìnea 12-16 del documento js)</h6>
+                        <p class="mt-3">
+                            El método push() añade uno o más elementos al final de un array y devuelve la nueva longitud
+                            del array.
+                        </p>
+                    </div>
 
-                <div class="col-11 container-ej1 p-5 shadow hvr-grow position-relative mb-5">
-                    <div class="content z-3">
-                        <h4>const personaMasJoven = ArrayEjemplo.reduce((personaMasJoven, persona) => { <br>
-                            if (!personaMasJoven || persona.edad < personaMasJoven.edad) <br> { return persona; } <br>
-                                return
-                                personaMasJoven; }, null);</h4>
+                    <div class="col-11 container-ej1 p-5 shadow hvr-grow position-relative">
+                        <div class="content z-3">
+                            <h4>const personaMasJoven = ArrayEjemplo.reduce((personaMasJoven, persona) => { <br>
+                                if (!personaMasJoven || persona.edad < personaMasJoven.edad) <br> { return persona; }
+                                    <br>
+                                    return
+                                    personaMasJoven; }, null);</h4>
+                        </div>
+                        <h4> Mètodo REDUCE()</h4>
+                        <h6>(Lìnea 18-25 del documento js)</h6>
+                        <p class="mt-3">
+                            El método reduce() ejecuta una función reductora sobre cada elemento de un array,
+                            devolviendo
+                            como resultado un único valor. <br>
+                            Para el ejemplo, utilizaremos reduce para obtener a la persona màs joven dentro del array
+                        </p>
                     </div>
-                    <h4> Mètodo REDUCE()</h4>
-                    <h6>(Lìnea 18-25 del documento js)</h6>
-                    <p class="mt-3">
-                        El método reduce() ejecuta una función reductora sobre cada elemento de un array, devolviendo
-                        como resultado un único valor. <br>
-                        Para el ejemplo, utilizaremos reduce para obtener a la persona màs joven dentro del array
-                    </p>
-                </div>
 
-                <div class="col-11 container-ej1 p-5 shadow hvr-grow position-relative mb-5">
-                    <div class="content z-3">
-                        <h4> console.log(resultFilter = ArrayEjemploNombres.filter((word) => word.length > 9)); </h4>
+                    <div class="col-11 container-ej1 p-5 shadow hvr-grow position-relative">
+                        <div class="content z-3">
+                            <h4> console.log(resultFilter = ArrayEjemploNombres.filter((word) => word.length > 9));
+                            </h4>
+                        </div>
+                        <h4> Método FILTER()</h4>
+                        <h6>(Lìnea 27-32 del documento js)</h6>
+                        <p class="mt-3">
+                            El método filter() crea un nuevo array con todos los elementos que cumplan la condición
+                            implementada por la función dada.
+                            Para el ejemplo el nombre tiene que ser mayor a 9 caracteres
+                        </p>
                     </div>
-                    <h4> Mètodo FILTER()</h4>
-                    <h6>(Lìnea 27-32 del documento js)</h6>
-                    <p class="mt-3">
-                        El método filter() crea un nuevo array con todos los elementos que cumplan la condición
-                        implementada por la función dada.
-                        Para el ejemplo el nombre tiene que ser mayor a 9 caracteres
-                    </p>
                 </div>
-                <h1> Mostrar los datos que contiene un Array de js </h1>
-                <h6>Canciones Favoritas - Màs recientes</h6>
-                <div class="contenedorM mt-5 row gap-5" id="containerMusic">
+            </div>
+            <div class="d-grid gap-5"> <!--Contenedor del ejercicio 2-->
+                <div class="text-center"> <!--Contenedor del titulo 2-->
+                    <h1> Mostrar datos en página que contiene un Array de js </h1>
+                    <h6>Canciones Favoritas - Màs recientes</h6>
+                </div>
+                <div class="contenedorM row gap-5" id="containerMusic">
+                </div>
+            </div>
+            <div class="d-grid gap-5"> <!--Contenedor del ejercicio 3-->
+                <div class="text-center"> <!--Contenedor del titulo 3-->
+                    <h1> Mostrar datos en página haciendo uso de una API gratuita </h1>
+                    <h6>PokeAPI</h6>
+                </div>
+                <div class="d-flex justify-content-center gap-5">
+                    <div class="PokeCard position-relative">
+                        <h3 class="text-center pt-4">DITTO</h3>
+                        <div id="imgContainer"></div>
+                        <div id="textContainer"></div>
+                    </div>
                 </div>
             </div>
         </div>
